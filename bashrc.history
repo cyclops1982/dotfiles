@@ -1,0 +1,5 @@
+# Bash HIstory config: Don't store duplicates. Don't have a history. Set a date/time format for the 'history' command.
+export HISTCONTROL=ignoreboth
+export HISTSIZE=
+export HISTFILESIZE=
+export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
