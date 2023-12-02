@@ -132,4 +132,5 @@ export PS1='\[\033[1m\][\[\033[0m\]\t\[\033[1m\]] \[\033[1;32m\]\u\[\033[0m\]\[\
 # The config helper
 alias config='git --git-dir=/home/cyclops/dev/dotfiles/.git/ --work-tree=/home/cyclops'
 
-
+# NodeJS path
+export PATH=$PATH:/usr/local/lib/nodejs/node-v20.10.0-linux-x64/bin/
