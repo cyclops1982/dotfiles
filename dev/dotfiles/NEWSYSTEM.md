@@ -8,6 +8,8 @@ Run this `apt install` command :)
 apt install htop keepassxc vim git
 ```
 
+
+
 ## Gnome config
 
 The folowing xtensions are installed:
@@ -34,4 +36,17 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packag
 rm -f packages.microsoft.gpg
 sudo apt update
 sudo apt install code 
+```
+
+
+## Other config
+
+### Set default editor
+```
+sudo update-alternatives --config editor 
+```
+
+### Set git author settings
+```
+git config --global --edit
 ```
