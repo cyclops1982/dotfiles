@@ -5,7 +5,7 @@ These are notes that i've made around setting up and installing a new system. Th
 Run this `apt install` command :)
 
 ```
-apt install htop keepassxc vim git curl python3.11-venv
+apt install htop keepassxc vim git curl python3.11-venv tmux
 ```
 
 
