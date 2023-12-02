@@ -20,6 +20,7 @@ The file `gnome-settings.ini` contains a `dconf dump /`. This can be loaded with
 The following other tools are installed.
 
 - Nextcloud
+- golang (https://go.dev/doc/install)
 - vscode
 
 ### VSCode
