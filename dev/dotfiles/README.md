@@ -13,3 +13,8 @@ alias config='git --git-dir=/home/cyclops/dev/dotfiles/.git/ --work-tree=/home/c
 ```
 
 After this you can use go back to your home dir and use 'config checkout .bashrc' to restore/get .bashrc file
+
+## WARNING
+To work with this repo, you should **ALWAYS** use the `config` command. Doing anything with `git` will mess things up.
+The concept is that you can run `config` in the root of your home directory. This is why 'other' useful files are in `dev/dotfiles`, even though that is the directory of the repo.
+
