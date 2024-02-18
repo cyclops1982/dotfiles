@@ -111,10 +111,20 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Git branch in prompt
+# FUNCTIONS #
+
+# Get the bit branch in our prompt (used in $PS1)
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
+
+# from https://askubuntu.com/questions/636944/how-to-change-the-title-of-the-current-terminal-tab-using-only-the-command-line
+set_termname() {
+	echo -en "\033]0;$1\a";
+};
+
+# paste
+6p() { curl -s -F "content=<${1--}" -F ttl=604800 -w "%{redirect_url}\n" -o /dev/null https://paste.prof-x.net/; }
 
 # Go path (2nd one is for protoc)
 export PATH=$PATH:/usr/local/go/bin
