@@ -138,6 +138,9 @@ export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
 # Make nice colours
 export PS1='\[\033[1m\][\[\033[0m\]\t\[\033[1m\]] \[\033[1;32m\]\u\[\033[0m\]\[\033[1;31m\]@\[\033[0m\]\[\033[1m\]\h:\[\033[34m\]\w\[\033[1;31m\]$(parse_git_branch)\$\[\033[0m\] '
 
+# In gnome, put the title of the command in the title bar
+trap 'echo -ne "\033]2;$(history 1 | sed "s/[^T]*T//g")\007"' DEBUG
+
 # The config helper
 alias config='git --git-dir=/home/cyclops/dev/dotfiles/.git/ --work-tree=/home/cyclops'
 
