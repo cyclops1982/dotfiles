@@ -2,8 +2,7 @@
 
 AICommand() {
     text="$1"
-    echo $text
-    # Create a simple JSON object with the text
+    
     json_string=$(cat <<EOF
         {
             "model": "llama3.1:8b",

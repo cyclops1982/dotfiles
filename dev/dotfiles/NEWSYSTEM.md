@@ -25,6 +25,7 @@ The following other tools are installed.
 - golang (https://go.dev/doc/install)
 - vscode
 - qownnotes
+- spotify (see https://www.spotify.com/de-en/download/linux/)
 
 ### VSCode
 
@@ -43,19 +44,13 @@ sudo apt install code
 ### QowNotes
 Install from https://www.qownnotes.org/installation/debian.html
 
-```
-SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
-sudo mkdir -p "$(dirname "${SIGNED_BY}")"
-curl --silent --show-error --location http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_12/Release.key | gpg --dearmor | sudo tee "${SIGNED_BY}" > /dev/null
-sudo chmod u=rw,go=r "${SIGNED_BY}"
-```
+### Spotify
+- See https://www.spotify.com/de-en/download/linux/
 
 ```
-SIGNED_BY='/etc/apt/keyrings/qownnotes.gpg'
-ARCHITECTURE="$(dpkg --print-architecture)"
-echo "deb [arch=${ARCHITECTURE} signed-by=${SIGNED_BY}] http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_12/ /" | sudo tee /etc/apt/sources.list.d/qownnotes.list > /dev/null
-sudo apt update
-sudo apt install qownnotes
+curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
 ```
 
 
